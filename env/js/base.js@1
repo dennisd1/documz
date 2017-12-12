@@ -1,0 +1,131 @@
+var current_step;
+var form_data;
+var tab_enable = false;
+$(document).ready(function () {
+    autosave = $.jStorage.get("autosave");
+    if (autosave !== null) {
+        $("#form").deserialize(autosave);
+        if ($("#step6_table_data").length != "") {//восстановить таблицу адресатов
+            d = $.parseJSON($("#step6_table_data").val());
+            for (var prop in d) {
+//                if(d[prop].select!=undefined)
+                $("#table_recipient tr.data:eq(" + prop + ")").find('input[type=checkbox]').attr("checked", d[prop].select);
+//                else
+//                    $("#table_recipient tr.data:eq(" + prop + ")").find('input[type=checkbox]').attr("checked", true);
+                $("#table_recipient tr.data:eq(" + prop + ")").children('td.row_name').text(d[prop].name);
+                $("#table_recipient tr.data:eq(" + prop + ")").children('td.row_index').text(d[prop].index);
+                $("#table_recipient tr.data:eq(" + prop + ")").children('td.row_street').text(d[prop].street);
+                $("#table_recipient tr.data:eq(" + prop + ")").children('td.row_region').text(d[prop].region);
+            }
+        }
+        //правим корявые значения сдвигов
+        if ($("#step7_from_x").val() > 20) $("#step7_from_x").val(0);
+        if ($("#step7_from_y").val() > 20) $("#step7_from_y").val(0);
+        if ($("#step7_from_step").val() < 5 || $("#step7_from_step").val() > 10) $("#step7_from_step").val(6.5);
+        if ($("#step7_to_x").val() > 20) $("#step7_to_x").val(0);
+        if ($("#step7_to_y").val() > 20) $("#step7_to_y").val(0);
+        if ($("#step7_to_step").val() < 5 || $("#step7_to_step").val() > 10) $("#step7_to_step").val(6.5);
+        if ($("#step7_index_x").val() > 20) $("#step7_index_x").val(0);
+        if ($("#step7_index_y").val() > 20) $("#step7_index_y").val(0);
+    }
+    $(document).bind("keypress", function (event) {
+        if (event.keyCode == 9)
+            return false;
+    });
+    $(document).bind("keydown", function (event) {
+        if (event.keyCode == 9)
+            return false;
+    });
+
+
+    $("#form input, #form textarea").live("change", function () {//сохранение формы в localstorage
+        $.jStorage.set("autosave", $("form").serializeArray());
+        //поскольку этот код (выше) не исполняется при завершении ентером шага6 - повторяем его
+        //шаг 7 - не работает при табуляции - тоже повторяем
+    });
+
+    var root = $("#content").scrollable({
+        onSeek: function (a, b) {
+            after_steps();
+            switch (b) {
+                case 1:
+                    after_step1();
+                    break;
+                case 2: // внимание, второго шага нет
+                    after_step3();
+                    break;
+                case 3:
+                    after_step4();
+                    break;
+                case 4:
+                    after_step5();
+                    break;
+                case 6:
+                    after_step7();
+                    break;
+                case 7:
+                    after_step8();
+                    break;
+            }
+        },
+        onBeforeSeek: function (a, b) {
+            before_steps();
+            $(document).unbind("keydown.edit_input"); // убрать все обработчики клавиатуры
+            $(document).unbind(kursor_navigation);
+            switch (b) {
+                case 0:
+                    before_step0();
+                    break;
+                case 1:
+                    before_step1();
+                    break;
+                case 2: // внимание, второго шага нет
+                    before_step3();
+                    break;
+                case 3:
+                    before_step4();
+                    break;
+                case 4:
+                    before_step5();
+                    break;
+                case 5:
+                    before_step6();
+                    break;
+                case 6:
+                    before_step7();
+                    break;
+                case 7:
+                    before_step8();
+                    break;
+            }
+        },
+        speed: 500,
+        keyboard: false
+    }).navigator({
+        navi: ".flowtabs",
+        naviItem: 'a',
+        activeClass: 'current',
+        history: true
+    });
+
+    $("#form").bind("submit", function () {
+        _gaq.push(['_trackEvent', 'Envelope', 'Download']);
+        return true;
+    });
+
+
+    if (typeof(adblock) === "undefined") {
+        $("#pleaseAdblock1").show();
+        $("#pleaseAdblock2").show();
+        $("#goto_final").hide();
+    }
+});
+
+function before_steps() {
+    finishEditCell($("#activecell"));
+}
+
+function after_steps() {
+    $("li.current").removeClass("current");
+    $("a.current").parents("li").addClass("current");
+}

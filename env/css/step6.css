@@ -1,0 +1,89 @@
+#table_recipient {
+    border-collapse: collapse;
+    width: 100%;
+    height: 426px;
+    overflow-y: auto;
+    display: block;
+}
+
+#table_recipient td, #table_recipient th {
+    border: 1px solid #BFB38D;
+    background-color: white;
+    padding: 2px;
+    cursor: default;
+    vertical-align: middle;
+
+}
+
+#table_recipient th {
+    vertical-align: middle;
+    background: #BFB38D url("../images/gradient-bg.png") repeat-x top;
+    -o-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background: -moz-linear-gradient(top, #fff, #BFB38D);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#BFB38D));
+}
+
+#table_recipient tr{
+    height:40px;
+}
+
+#table_recipient tr.header{
+    height:auto;
+}
+#table_recipient th.row_empty {
+    width: 20px;
+    text-align: center;
+}
+#table_recipient th.row_data{
+    width: 20px;
+    text-align: center;
+}
+
+#table_recipient td.row_empty {
+    text-align: center;
+}
+#table_recipient td.row_data{
+    text-align: center;
+    width: 16px;
+}
+#table_recipient .row_name {
+    width: 200px;
+}
+
+#table_recipient .row_index {
+    width: 48px;
+}
+
+#table_recipient .row_street {
+    width: 199px;
+}
+
+#table_recipient th.row_region {
+    width: 199px;
+}
+
+#edit_input {
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font: 12px/15px Arial, Tahoma, Verdana, sans-serif;
+    background-color:transparent;
+}
+
+#table_recipient #activecell {
+    /*background-color: #dcddde;*/
+outline: 1px solid black;
+}
+
+#table_recipient td.selected.edited {
+    border: 1px solid black;
+    outline: none;
+}
+#table_recipient td.index_error{
+    background-color: #ffcccc;
+}

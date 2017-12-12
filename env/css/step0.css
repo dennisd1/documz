@@ -1,0 +1,43 @@
+div.info {
+    width: 581px;
+    height: 90px;
+    border: 1px solid #402D1F;
+    padding: 10px 10px 10px 110px;
+    margin-top: 15pt;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #E5E5B8;
+    background-image: url("../images/info.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+div.info p,div.info li {
+    font: 10px/12px verdana;
+}
+
+div.info li{
+    list-style-type:disc;
+    list-style-position:outside;
+    margin-left:12px;
+}
+div.info p span {
+    color: #8C2C0F;
+    cursor: pointer;
+}
+
+.goto_button {
+    width: 200px;
+    height: 50px;
+    font-size: 12pt;
+    margin-left: 245px;
+    font-weight: bold;
+    margin-top:10px;
+    margin-bottom:10px;
+    white-space:normal;
+}
+
+#acrobat_no,#acrobat_yes{
+    background-image: url("../images/acrobat_logo.png");
+}

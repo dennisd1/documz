@@ -1,0 +1,227 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: blue;
+    outline: none;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: none;
+}
+
+input {
+    vertical-align: middle;
+}
+
+#wrapper {
+    width: 991px;
+    margin: 0 auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+    height: 50px;
+    background: none repeat scroll 0 0 none;
+    text-align: center;
+    font: 24pt tahoma;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+    width: 100%;
+    padding: 0 0 0 0px;
+    height: 1%;
+}
+
+#middle:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+#container {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+#content {
+    padding: 0 0 0 250px;
+}
+
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+    float: left;
+    width: 204px;
+    margin-left: -100%;
+    position: relative;
+    font: 14pt/45pt tahoma;
+    margin-left: -945px;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+    width: 950px;
+    margin: -20px auto 0;
+    height: 20px;
+    text-align: right;
+}
+
+/*----------------------------------------*/
+
+p {
+    margin: 0 0 7pt;
+    font: 13pt/15pt tahoma;
+    text-align: justify;
+    color: #26221D;
+}
+
+a {
+    color: #26221D;
+}
+
+h1 {
+    font: 26pt/36pt tahoma;
+    text-align: center;
+    color: #402D1F;
+    padding-top: 0pt;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+h2 {
+    font: 16pt/20pt tahoma;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #26201A;
+    color: #402D1F;
+    width: 700px;
+}
+
+.scrollable {
+    position: relative;
+    overflow: hidden;
+    width: 745px;
+    height: 700px;
+}
+
+.scrollable .items {
+    position: absolute;
+    width: 20000em;
+    background: none
+}
+
+.items div {
+    float: left;
+    height: 660px;
+    width: 745px;
+}
+
+div.page {
+    margin: 5px;
+    width: 691px;
+    background: #E8E7DC;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-right: 11px;
+    margin-top: 0px;
+    margin-left: 0;
+    padding: 20px;
+}
+
+a.current {
+}
+
+#action_list {
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    -moz-border-radius: 10px 0px 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+    font: 14pt/40pt tahoma;
+}
+
+#action_list li {
+    padding-left: 10px;
+    -moz-border-radius: 10px 0 0px 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+}
+
+#action_list li.current {
+    background-color: #E8E7DC;
+    font-weight: bold;
+}
+p.go_action{
+    width:700px;
+}

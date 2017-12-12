@@ -1,0 +1,28 @@
+div.step_table.unchecked:hover {
+    background-color: transparent;
+    border: 1px solid #BFB38D;
+}
+
+div.overlay {
+    background-color: gray;
+    z-index: 100;
+    position: absolute;
+    width: 730px;
+    height: 640px;
+    margin-top: -20px;
+    margin-left: -20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    opacity: .9;
+    display:none;
+}
+div.overlay h2{
+    margin-top: 244px;
+    margin-left: 15px;
+}
+
+div.overlay input#goto_step5-2 {
+    margin-top: 28px;
+    margin-left: 265px;
+}

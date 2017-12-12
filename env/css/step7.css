@@ -1,0 +1,37 @@
+fieldset#step7 .step_table {
+    cursor: auto;
+}
+
+fieldset#step7 input.input {
+    width: 30px;
+    margin-top: -3px;
+}
+
+fieldset#step7 span.info {
+
+}
+
+fieldset#step7 span.info span.input {
+    width: 80px;
+}
+
+fieldset#step7 span.info span.warning {
+    width: 200px;
+}
+fieldset#step7 span.info span {
+    width: 200px;
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+
+div.overlay input#goto_step8-2 {
+    margin-top: 77px;
+    margin-left: 266px;
+}
+.img_inside{
+    width:100px; height:100px;
+    background-repeat:no-repeat;
+    overflow:hidden;
+    border: 1px solid #BFB38D;
+}

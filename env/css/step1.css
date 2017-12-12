@@ -1,0 +1,77 @@
+div.step_table {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 691px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #BFB38D;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+div.step_table:hover {
+    background-color: #BFB38D;
+    border: 1px solid #402D1F;
+}
+
+div.step_table.selected {
+    background-color: #BFB38D;
+    border: 1px solid #402D1F;
+}
+
+.step_table div.img img {
+    border: 1px solid #BFB38D;
+}
+
+.step_table div span.title {
+    display: block;
+    font: 16px/20px verdana;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-bottom:10px;
+}
+
+.step_table div span.size {
+    display: block;
+    font: 12px/14px verdana;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+.step_table div span.info {
+    display: block;
+    font: 12px/14px verdana;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    clear:both;
+}
+
+.step_table input[type=radio], .step_table input[type=checkbox] {
+    display: block;
+    float: left;
+    width: 16px;
+    margin-right: 15px;
+    vertical-align: middle;
+    height: inherit;
+    cursor: pointer;
+}
+
+.step_table div.img {
+    display: block;
+    float: left;
+    width: 149px;
+    margin-right: 15px;
+    height:auto;
+}
+
+.step_table div.text {
+    display: block;
+    float: left;
+    width: 486px;
+    height:auto;
+}

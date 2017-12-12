@@ -1,0 +1,33 @@
+fieldset#step5 .step_table div.text {
+    width: 300px;
+    margin-top: 5px;
+}
+
+.step_table input[type=text], .step_table textarea {
+    display: block;
+    float: left;
+    width: 370px;
+    margin-right: 15px;
+    vertical-align: middle;
+    margin-top: 4px;
+    font: 12px/15px Arial, Tahoma, Verdana, sans-serif;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #402D1F;
+}
+
+.step_table textarea {
+    width: 370px;
+    height: 32px;
+    resize: none;
+}
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+    color: #E5E5B8;
+}
+
+input.-moz-placeholder,textarea.-moz-placeholder {
+    color: #E5E5B8;
+}
+/*TODO placeholder для opera*/
