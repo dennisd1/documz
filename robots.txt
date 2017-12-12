@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: *?track=*
+Host: https://print-post.com
+
+User-agent: Yandex
+Disallow: *?track=*
+Clean-param: track /trekking_posylok.htm
+
